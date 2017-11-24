@@ -1,0 +1,27 @@
+{
+  "name": "electron-lease",
+  "description": "An Electron application For Lease",
+  "main": "main.js",
+  "authors": [
+    "michaeldyl520"
+  ],
+  "license": "CC0-1.0",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "homepage": "https://github.com/michaeldyl520/electron-lease",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
