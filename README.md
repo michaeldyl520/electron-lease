@@ -12,4 +12,7 @@ bower 1.8.2
 npm install
 bower install
 ```
-
+## Run
+```shell
+npm start
+```
