@@ -2,9 +2,9 @@
 
 const electron = require('electron');
 
-const path = require('path')
+const path = require('path');
 
-const url = require('url')
+const url = require('url');
 
 const config = require('./config');
 
@@ -20,7 +20,7 @@ let template = [{
         role: '',
         click: function (item, focusedWindow) {
             // In the main process.
-            const { BrowserWindow } = require('electron')
+            const { BrowserWindow } = require('electron');
 
             // Or use `remote` from the renderer process.
             // const {BrowserWindow} = require('electron').remote
@@ -31,13 +31,13 @@ let template = [{
             win.setMenu(null);
 
             win.on('closed', () => {
-                win = null
-            })
+                win = null;
+            });
             win.loadURL(url.format({
                 pathname: path.join(__dirname, config.view.path, config.view.sub.DataMaintenance, 'hth.html'),
                 protocol: 'file:',
                 slashes: true
-            }))
+            }));
         }
     }, {
         label: '材料名称',
@@ -91,7 +91,7 @@ let template = [{
         type: 'separator'
     }, {
         label: '关闭',
-        accelerator: 'CmdOrCtrl+W',
+        accelerator: 'CmdOrCtrl+Q',
         role: 'close'
     }]
 }, {
@@ -135,39 +135,39 @@ let template = [{
                 if (focusedWindow.id === 1) {
                     BrowserWindow.getAllWindows().forEach(function (win) {
                         if (win.id > 1) {
-                            win.close()
+                            win.close();
                         }
-                    })
+                    });
                 }
-                focusedWindow.reload()
+                focusedWindow.reload();
             }
         }
     }, {
         label: 'Toggle Full Screen',
         accelerator: (function () {
             if (process.platform === 'darwin') {
-                return 'Ctrl+Command+F'
+                return 'Ctrl+Command+F';
             } else {
-                return 'F11'
+                return 'F11';
             }
         })(),
         click: function (item, focusedWindow) {
             if (focusedWindow) {
-                focusedWindow.setFullScreen(!focusedWindow.isFullScreen())
+                focusedWindow.setFullScreen(!focusedWindow.isFullScreen());
             }
         }
     }, {
         label: 'Toggle Developer Tools',
         accelerator: (function () {
             if (process.platform === 'darwin') {
-                return 'Alt+Command+I'
+                return 'Alt+Command+I';
             } else {
-                return 'Ctrl+Shift+I'
+                return 'Ctrl+Shift+I';
             }
         })(),
         click: function (item, focusedWindow) {
             if (focusedWindow) {
-                focusedWindow.toggleDevTools()
+                focusedWindow.toggleDevTools();
             }
         }
     }, {
@@ -181,8 +181,8 @@ let template = [{
                     title: 'Application Menu Demo',
                     buttons: ['Ok'],
                     message: 'This demo is for the Menu section, showing how to create a clickable menu item in the application menu.'
-                }
-                electron.dialog.showMessageBox(focusedWindow, options, function () { })
+                };
+                electron.dialog.showMessageBox(focusedWindow, options, function () { });
             }
         }
     }]
@@ -205,7 +205,7 @@ let template = [{
         enabled: false,
         key: 'reopenMenuItem',
         click: function () {
-            app.emit('activate')
+            app.emit('activate');
         }
     }]
 }, {
@@ -214,7 +214,7 @@ let template = [{
     submenu: [{
         label: 'Learn More',
         click: function () {
-            electron.shell.openExternal('http://electron.atom.io')
+            electron.shell.openExternal('http://electron.atom.io');
         }
     }, {
         label: 'About Us',
@@ -226,7 +226,7 @@ let template = [{
                     buttons: ['确定'],
                     message: '这是一款适用于建材租赁行业的APP桌面程序！'
                 };
-                electron.dialog.showMessageBox(focusedWindow, options, function () { })
+                electron.dialog.showMessageBox(focusedWindow, options, function () { });
             }
         }
     }]

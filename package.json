@@ -6,16 +6,24 @@
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaeldyl520/electron-lease.git"
+  },
+  "bugs":{
+    "url": "https://github.com/michaeldyl520/electron-lease/issues",
+    "email": "michaeldyl520@gmail.com"
+  },
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "lease"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": {
+    "name": "michaeldyl520",
+    "email": "michaeldyl520@gmail.com",
+    "url": "http://www.jiliuke.com"
+  },
+  "license": "GNU GPLv3",
   "devDependencies": {
     "electron": "~1.7.8"
   }
