@@ -1,3 +1,4 @@
+[![codebeat badge](https://codebeat.co/badges/e235e5c8-5e09-4937-94f0-f582da07e060)](https://codebeat.co/projects/github-com-michaeldyl520-electron-lease-master)
 # electron-lease
 ## Require
 
