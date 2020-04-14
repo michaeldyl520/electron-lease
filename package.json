@@ -4,13 +4,14 @@
   "description": "An Electron application For Lease",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron main.js",
+    "postinstall": "electron-rebuild -m=node_modules/sqlite3"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/michaeldyl520/electron-lease.git"
   },
-  "bugs":{
+  "bugs": {
     "url": "https://github.com/michaeldyl520/electron-lease/issues",
     "email": "michaeldyl520@gmail.com"
   },
@@ -25,6 +26,10 @@
   },
   "license": "GNU GPLv3",
   "devDependencies": {
-    "electron": ">=1.8.2-beta5"
+    "electron": "^8.2.1",
+    "electron-rebuild": "^1.10.1"
+  },
+  "dependencies": {
+    "sqlite3": "^4.1.1"
   }
 }
